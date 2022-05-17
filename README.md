@@ -3,7 +3,7 @@
 
 ### 🖥️ 완성본
 
-![Screen](./Screenshot.png)
+![Screen](Screenshot.png)
 
 ### [GitHub 링크](https://github.com/529539/10th-Todo-publishing)
 
