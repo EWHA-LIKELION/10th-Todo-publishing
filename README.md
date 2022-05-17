@@ -8,8 +8,7 @@
 ### [GitHub 링크](https://github.com/529539/10th-Todo-publishing)
 
 ### [netlify 링크](https://todo-geeeezin-529539.netlify.app/)
-
-- deploy도 한번 해봤습니다 부꾸럽지만 나름 제 첫 페이지니까요...^//^
+deploy도 한번 해봤습니다 부꾸럽지만 나름 제 첫 페이지니까요...^//^
 
 ### ⛔ 미해결 이슈
 
