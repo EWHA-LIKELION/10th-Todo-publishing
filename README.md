@@ -3,7 +3,7 @@
 
 ### 🖥️ 완성본
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/37c343d7-a32a-4454-9051-42fea6760654/Untitled.png)
+![Screen](./Screenshot.png)
 
 ### [GitHub 링크](https://github.com/529539/10th-Todo-publishing)
 
