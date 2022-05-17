@@ -15,15 +15,15 @@ deploy도 한번 해봤습니다 부꾸럽지만 나름 제 첫 페이지니까�
 - 리스트를 2개의 단으로 나누기
 (4개 이상 작성되면 다음 단인 오른쪽으로 넘어가야 하는데 그냥 아래로 계속 이어짐.
 조건문으로 5개부터 새로운 `<ul>`에 작성되게 하기? 도전은 해봤는데 아무튼 구현은 못함..)
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fa2d6cc2-f6f6-4726-9e79-56998f0560ca/Untitled.png)
-    
+
+
+
 - 리스트끼리 띄워두려고 `<li>`에 `line-height` 속성을 주었더니
 하나의 `<li>` 내에서도 내용이 길어져 2줄로 넘어가면 줄간격이 너무 큼
 또, 줄바꿈되었을 때 텍스트가 시작된 부분에서 2번째 줄이 시작되는 것이 아니라
 `<li>`의 모양으로 주었던 체크박스 이미지 전까지 앞으로 붙어나옴
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b2396391-96d5-45e2-9c57-300014b4c41e/Untitled.png)
+
+
     
 - 전부 `position: absolute;` 설정하여 픽셀로 위치를 설정함....
 아직 `position: relative;` , `float` , `margin` , `padding` 사용하는게 어렵다🥲
