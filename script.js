@@ -35,6 +35,7 @@ const addTodoItem = () => {
     event.preventDefault(); //새로 고침 방지
     const todoContent = document.querySelector(".todo-input").value;
     if (todoContent && (todoListNum <=4)) printTodoItem(todoContent); //todo-list 최대 수 5개이므로 printTodoItem 조건에 childElementCount 값 넣어줌
+    else alert("최대 5개까지 입력할 수 있습니다.");
 };
 
 // 화면에 todo item을 추가
@@ -106,11 +107,13 @@ const deleteTodoItem = e => {
 
 //todolist에 있는 것을 클릭하면 donelist로 옮겨줌
 const toggleTodoToDone = e => { //e는 함수 생성에 이용되는 매개변수
-    // todo List 에서 item 삭제
-    deleteTodoItem(e);
-    // done list에 item 추가
     doneListNum = document.querySelector(".done-list").childElementCount;
-    if (doneListNum<=4) printDoneItem(e.target.innerText); //done-list에 최대 5개까지 들어갈 수 있게 함
+    // todo List 에서 item 삭제후 , done list에 item 추가 (done list가 꽉 차지 않은 경우에만 실행)
+    if (doneListNum<=4){
+        deleteTodoItem(e);
+        printDoneItem(e.target.innerText); //done-list에 최대 5개까지 들어갈 수 있게 함
+    }
+    else alert("최대 5개까지 옮길 수 있습니다.");
 }; //e.target == 이벤트가 발생한 태그(클릭 받은 태그)
 
 //done list 만들기
@@ -127,14 +130,19 @@ const printDoneItem = (text) => {
     newDone.className = 'done-list-item';
     newDone.appendChild(newTodoText);
 
-    //done-list에 만들어준 newdone(li)를 넣어줌 
-    document.querySelector('.done-list').appendChild(newDone);
+    doneListNum = document.querySelector(".done-list").childElementCount; //갯수 0부터 시작
+    //done-list에 만들어준 newdone(li)를 넣어줌, 최대 갯수가 5이므로 5개로 제한
+    if(doneListNum<=4) document.querySelector('.done-list').appendChild(newDone);
     };
 
     //done 목록 누르는 event가 있으면 done에서 삭제하고, todo에서 나타나게함
     const toggleDoneToTodo = (e) => { 
-        deleteDoneItem(e);
-        printTodoItem(e.target.innerText); //눌러진 (이벤트 발생) 목록의 innertext를 todo에 넣음
+        todoListNum = document.querySelector(".todo-list").childElementCount; //0~4
+        if(todoListNum<=4){
+            deleteDoneItem(e);
+            printTodoItem(e.target.innerText); //눌러진 (이벤트 발생) 목록의 innertext를 todo에 넣음
+        }
+        else alert("최대 5개까지 옮길 수 있습니다.");
     };
 
     //done 목록 누르는 event 있으면 done에서 삭제
