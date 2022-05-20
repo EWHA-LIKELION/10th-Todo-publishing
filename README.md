@@ -1,5 +1,6 @@
 # 10th-Todo-publishing
 ***5/20 수정사항***
+
 ![image](https://user-images.githubusercontent.com/89545462/169517544-f355708d-2d52-471c-be4c-9e496942631f.png)
 - 6개 이상 입력하는 경우, alert로 알리기
 ![image](https://user-images.githubusercontent.com/89545462/169517559-0b404b88-2613-4b51-9769-6ed430ceed4d.png)
