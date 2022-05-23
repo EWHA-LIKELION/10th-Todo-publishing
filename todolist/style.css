@@ -48,62 +48,45 @@ body {
   position: absolute;
   top: 188px;
   left: 37px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 30px;
   overflow: hidden;
 }
 .d {
   margin-top: 7%;
 }
-.daily-btn {
-  top: 69px;
-  left: 78px;
-  width: 161px;
+
+.tap-btn {
+  width: 50%;
   height: 64px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  margin-left: 25%;
+  margin-top: 20%;
+  border-radius: 30px;
+  overflow: hidden;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: Light;
+  font-size: 24px;
+  text-align: center;
+  opacity: 1;
+  color: rgba(0, 0, 0, 1);
+  overflow: hidden;
+  cursor: pointer;
+}
+.here {
   background: rgba(41, 126, 255, 1);
   opacity: 1;
-  position: absolute;
   color: rgba(255, 255, 255, 1);
   text-align: center;
   border-radius: 30px;
   font-family: 'Spoqa Han Sans Neo';
   font-weight: Bold;
   font-size: 24px;
-}
-.weekly-btn {
-  width: 161px;
+  width: 50%;
   height: 64px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 192px;
-  left: 78px;
+  margin-left: 25%;
+  margin-top: 20%;
   border-radius: 30px;
-  overflow: hidden;
-  font-family: 'Spoqa Han Sans Neo';
-  font-weight: Light;
-  font-size: 24px;
-  opacity: 1;
-  text-align: center;
-  color: rgba(0, 0, 0, 1);
-  overflow: hidden;
-}
-.monthly-btn {
-  width: 161px;
-  height: 64px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 314px;
-  left: 78px;
-  border-radius: 30px;
-  color: rgba(0, 0, 0, 1);
-  font-family: 'Spoqa Han Sans Neo';
-  font-weight: Light;
-  font-size: 24px;
-  text-align: center;
   overflow: hidden;
 }
 .hr {
@@ -184,93 +167,19 @@ body {
   left: 20px;
   top: 30px;
   overflow: hidden;
+  cursor: pointer;
 }
-.sunday {
+.datebox {
   width: 80px;
   height: 80px;
   background: rgba(255, 255, 255, 1);
   opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 52px;
+  margin-left: 5%;
   border: 1px solid rgba(209, 209, 209, 1);
   border-radius: 30px;
-  overflow: hidden;
+  float: left;
 }
-.v93_426 {
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 180px;
-  border: 1px solid rgba(209, 209, 209, 1);
-  border-radius: 30px;
-}
-.v93_427 {
-  width: 80px;
-  height: 80px;
-  background: rgba(41, 126, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 2px;
-  left: 308px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-.v93_428 {
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 436px;
-  border: 1px solid rgba(209, 209, 209, 1);
-  border-radius: 30px;
-  overflow: hidden;
-}
-.v93_429 {
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 564px;
-  border: 1px solid rgba(209, 209, 209, 1);
-  border-radius: 30px;
 
-  overflow: hidden;
-}
-.v93_430 {
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 692px;
-  border: 1px solid rgba(209, 209, 209, 1);
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  overflow: hidden;
-}
-.v93_431 {
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 820px;
-  border: 1px solid rgba(209, 209, 209, 1);
-  border-radius: 30px;
-  overflow: hidden;
-}
 .turnright {
   position: absolute;
   left: 920px;
@@ -306,7 +215,14 @@ body {
   font-size: 20px;
   opacity: 1;
 }
+.check {
+  background: rgba(41, 126, 255, 1);
+  opacity: 1;
+}
 
+.checktext {
+  color: white;
+}
 .v93_435 {
   display: flex;
   justify-content: center;
@@ -331,10 +247,6 @@ body {
   text-align: center;
 }
 
-.name {
-  color: #fff;
-}
-
 .done-area {
   width: 485px;
   height: 795px;
@@ -346,13 +258,25 @@ body {
   border-radius: 30px;
   overflow: hidden;
 }
+.donetext::-webkit-scrollbar-thumb,
+.donetext::-webkit-scrollbar,
+.donetext::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+.todotext::-webkit-scrollbar-thumb,
+.todotext::-webkit-scrollbar,
+.todotext::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
 .done-list {
-  width: 80%;
-  height: 75%;
+  float: right;
+  width: 85%;
+  height: 65%;
   margin-top: 36%;
-  margin-left: 10%;
+  margin-left: 15%;
   position: absolute;
   overflow: hidden;
+  overflow-y: scroll;
 }
 
 .done-input-items {
@@ -466,23 +390,15 @@ body {
   opacity: 1;
   text-align: center;
 }
-
-.v93_462 {
-  width: 4px;
-  height: 67px;
-  background: rgba(232, 232, 232, 1);
-  opacity: 1;
+.monthly-area {
+  width: 1400px;
+  height: 795px;
+  background: #f5f5f5;
+  top: 188px;
+  left: 443px;
+  border-radius: 30px;
   position: absolute;
-  top: 46px;
-  left: 0px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  transform: rotate(-90deg);
-  overflow: hidden;
 }
-
 .to-do-list-area {
   width: 869px;
   height: 795px;
@@ -495,12 +411,66 @@ body {
   overflow: hidden;
 }
 .todo-list {
-  width: 80%;
-  height: 75%;
+  width: 90%;
+  float: left;
+  height: 65%;
   margin-top: 20%;
   margin-left: 10%;
   position: absolute;
   overflow: hidden;
+  overflow-y: scroll;
+}
+.todo-list::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 10px;
+}
+.todo-list::-webkit-scrollbar-thumb {
+  background-color: rgba(41, 126, 255, 1);
+  border-radius: 10px;
+}
+.todo-list::-webkit-scrollbar-track {
+  background-color: rgb(209, 209, 209);
+  border-radius: 10px;
+}
+.done-list::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 10px;
+  border-radius: 10px;
+}
+.done-list::-webkit-scrollbar-thumb {
+  background-color: rgba(41, 126, 255, 1);
+  border-radius: 10px;
+}
+.done-list::-webkit-scrollbar-track {
+  background-color: rgb(209, 209, 209);
+  border-radius: 10px;
+}
+.todo-list-item {
+  display: grid;
+  grid-template-columns: 10% 65% 25%;
+  border-radius: 13px;
+  background: #ffffff;
+  height: 15%;
+  margin-bottom: 5%;
+  width: 92%;
+}
+.todo-item-detail-text {
+  color: #8b8b8b;
+  font-weight: Regular;
+  font-size: 20px;
+}
+.todo-check-box {
+  width: 30px;
+  height: 30px;
+  margin-left: 40%;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+
+.todo-item-text {
+  margin-top: 10%;
+  font-size: 30px;
+  font-weight: bold;
 }
 .v93_465 {
   width: 729px;
@@ -647,7 +617,6 @@ body {
   width: 107px;
   height: 32px;
   float: left;
-
   color: rgba(60, 145, 73, 1);
   background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(60, 145, 73, 1);
@@ -663,11 +632,10 @@ body {
   width: 78px;
   height: 32px;
   float: left;
-  margin-inline-start: 15%;
   background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(255, 91, 0, 1);
   color: rgba(255, 91, 0, 1);
-  font-family: 'Spoqa Han Sans Neo';
+  font-family: Spoqa Han Sans Neo;
   font-weight: Medium;
   font-size: 16px;
   opacity: 1;
@@ -760,39 +728,6 @@ body {
   text-align: left;
 }
 
-.scroll_area {
-  width: 9px;
-  height: 510px;
-  background: rgba(232, 232, 232, 1);
-  opacity: 1;
-  display: flex;
-  float: right;
-  border-radius: 5px;
-  margin-top: 20%;
-  overflow: hidden;
-}
-.done_scroll_area {
-  width: 9px;
-  height: 510px;
-  background: rgba(232, 232, 232, 1);
-  opacity: 1;
-  display: flex;
-  float: right;
-  border-radius: 5px;
-  margin-top: 36%;
-  overflow: hidden;
-}
-.scroll_blue {
-  width: 9px;
-  height: 30%;
-  background: rgba(41, 126, 255, 1);
-  opacity: 1;
-  display: flex;
-  float: right;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -835,4 +770,91 @@ body {
   float: right;
   padding-right: 10px;
   background: none;
+}
+.done-list-item {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 10% 65% 25%;
+  border-radius: 13px;
+  background: #ffffff;
+  height: 15%;
+  margin-bottom: 5%;
+}
+.done-item-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+.done-item-detail-text {
+  color: #8b8b8b;
+  font-weight: Regular;
+  font-size: 20px;
+}
+/*캘린더*/
+.monthly-area {
+  padding: 2%;
+}
+.dateTitle {
+  font-size: x-large;
+}
+
+.dateHead div {
+  background: rgba(41, 126, 255, 1);
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.dateHead {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+}
+
+.grid div {
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.dateBoard div {
+  color: #222;
+  font-weight: bold;
+  min-height: 4rem;
+  padding: 15px 20px;
+  border-radius: 0.6rem;
+  border: 1px solid #eee;
+  background-color: white;
+  font-size: larger;
+}
+
+.noColor {
+  background: #eee;
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.btn {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #000;
+  border-width: 3px 3px 0 0;
+  cursor: pointer;
+}
+
+.prevDay {
+  transform: rotate(-135deg);
+}
+
+.nextDay {
+  transform: rotate(45deg);
 }
