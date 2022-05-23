@@ -9,7 +9,7 @@
 
 ![screen](./screen.png)
 
-### [netlify 링크](https://todo-geeeezin-529539.netlify.app/)
+### [netlify 링크 1](https://todo-geeeezin-529539.netlify.app/)
 
 ### ⛔ 미해결 이슈
 
@@ -74,7 +74,7 @@ FIgma to HTML이라는 플러그인을 발견해서 써봤는데
 
 
 
-### [netlify 링크](https://todo2-geeeezin-529539.netlify.app/)
+### [netlify 링크 2](https://todo2-geeeezin-529539.netlify.app/)
 
 ### 💡 해결 완료한 이슈들
 
