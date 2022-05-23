@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="top-container">
+                <div class="logo-container">
+                    <span class="logo-text">likelion</span>
+                    <img class="lion-logo" src="images/lion_logo.png"></img>
+                    <span class="logo-text logo-text2">10th</span>
+                </div>
+                <img class="heart-icon" src="images/heart.png"></img>
+                <div class="profile-circle"></div>
+                <div class="menu-icon">
+                    <div class="menu-icon-vector menu-icon-vector1"></div>
+                    <div class="menu-icon-vector menu-icon-vector2"></div>
+                    <div class="menu-icon-vector menu-icon-vector3"></div>
+                </div>
+            </div>
+
+            <div class="date-container">
+                <img class="calender-icon" src="images/calender.png"></img>
+                <span class="date-title" id="date-title"></span>
+                <div class="timeline"></div>
+
+                <div class="dot-we dot-b3"></div>
+                <span class="num-we num-b3" id="num-b3"></span><span class="day-we day-b3" id="day-b3"></span>
+                <div class="dot-we dot-b2"></div>
+                <span class="num-we num-b2" id="num-b2"></span><span class="day-we day-b2" id="day-b2"></span>
+                <div class="dot-wd dot-b1"></div>
+                <span class="num-wd num-b1" id="num-b1"></span><span class="day-wd day-b1" id="day-b1"></span>
+
+                <div class="dot-today"></div>
+                <span class="num-today" id="num-today"></span><span class="day-today" id="day-today"></span>
+                <div class="date-arrow">
+                    <img class="date-arrow-left" src="images/date_arrow.png"></img>
+                    <img class="date-arrow-right" src="images/date_arrow.png"></img>
+                </div>
+
+                <div class="dot-wd dot-a1"></div>
+                <span class="num-wd num-a1" id="num-a1"></span><span class="day-wd day-a1" id="day-a1"></span>
+                <div class="dot-wd dot-a2"></div>
+                <span class="num-wd num-a2" id="num-a2"></span><span class="day-wd day-a2" id="day-a2"></span>
+                <div class="dot-wd dot-a3"></div>
+                <span class="num-wd num-a3" id="num-a3"></span><span class="day-wd day-a3" id="day-a3"></span>
+            </div>
+            
+            <div class="logo-container">
+                <div class="todo-subtitle">today’s</div>
+                <div class="todo-title">TO DO LIST</div>
+                <div class="todo-background-circle1"></div>
+                <div class="todo-background-circle2"></div>
+            </div>
+
+            <div class="tasks-container">
+                <span class="list-title">Tasks</span>
+                <form class="todo-form">
+                    <span class="todo-form-colon">:</span>
+                    <input class="todo-input" placeholder="할 일을 입력하세요" type="text" />
+                    <button class="todo-input-button" type="submit">추가</button>
+                </form>
+                <img class="popup-button" src="images/edit.png" />
+                <div class="title-vector"></div>
+                <ul class="todo-list">
+                    <li class="todo-list-item">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="done-container">
+                <span class="list-title list-title2">Done</span>
+                <div class="title-vector title-vector2"></div>
+                <ul class="done-list">
+                    <li class="done-list-item">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
