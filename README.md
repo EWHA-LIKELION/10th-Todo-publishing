@@ -119,44 +119,44 @@ const addTodoItem = () => {
 
 4. **자동으로 오늘 날짜 불러오기**
     
-    ```jsx
-    let now = new Date();
-    let year = now.getFullYear();
-    let month = now.getMonth() + 1;
-    let date = now.getDate();
-    let today = document.querySelector(".today");
-    const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    let day = now.getDay();
+```jsx
+let now = new Date();
+let year = now.getFullYear();
+let month = now.getMonth() + 1;
+let date = now.getDate();
+let today = document.querySelector(".today");
+const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let day = now.getDay();
     
-    document.getElementById("date-title").innerHTML = year + " / " + month;
+document.getElementById("date-title").innerHTML = year + " / " + month;
     
-    document.getElementById("num-b3").innerHTML = date - 3;
-    if (day < 3) document.getElementById("day-b3").innerHTML = week[day - 3 + 7];
-    else document.getElementById("day-b3").innerHTML = week[day - 3];
+document.getElementById("num-b3").innerHTML = date - 3;
+if (day < 3) document.getElementById("day-b3").innerHTML = week[day - 3 + 7];
+else document.getElementById("day-b3").innerHTML = week[day - 3];
     
-    document.getElementById("num-b2").innerHTML = date - 2;
-    if (day < 2) document.getElementById("day-b2").innerHTML = week[day - 2 + 7];
-    else document.getElementById("day-b2").innerHTML = week[day - 2];
+document.getElementById("num-b2").innerHTML = date - 2;
+if (day < 2) document.getElementById("day-b2").innerHTML = week[day - 2 + 7];
+else document.getElementById("day-b2").innerHTML = week[day - 2];
     
-    document.getElementById("num-b1").innerHTML = date - 1;
-    if (day < 1) document.getElementById("day-b1").innerHTML = week[day - 1 + 7];
-    else document.getElementById("day-b1").innerHTML = week[day - 1];
+document.getElementById("num-b1").innerHTML = date - 1;
+if (day < 1) document.getElementById("day-b1").innerHTML = week[day - 1 + 7];
+else document.getElementById("day-b1").innerHTML = week[day - 1];
     
-    document.getElementById("num-today").innerHTML = date;
-    document.getElementById("day-today").innerHTML = week[day];
+document.getElementById("num-today").innerHTML = date;
+document.getElementById("day-today").innerHTML = week[day];
     
-    document.getElementById("num-a1").innerHTML = date + 1;
-    if (day > 5) document.getElementById("day-a1").innerHTML = week[day + 1 - 7];
-    else document.getElementById("day-a1").innerHTML = week[day + 1];
+document.getElementById("num-a1").innerHTML = date + 1;
+if (day > 5) document.getElementById("day-a1").innerHTML = week[day + 1 - 7];
+else document.getElementById("day-a1").innerHTML = week[day + 1];
     
-    document.getElementById("num-a2").innerHTML = date + 2;
-    if (day > 4) document.getElementById("day-a2").innerHTML = week[day + 2 - 7];
-    else document.getElementById("day-a2").innerHTML = week[day + 2];
+document.getElementById("num-a2").innerHTML = date + 2;
+if (day > 4) document.getElementById("day-a2").innerHTML = week[day + 2 - 7];
+else document.getElementById("day-a2").innerHTML = week[day + 2];
     
-    document.getElementById("num-a3").innerHTML = date + 3;
-    if (day > 3) document.getElementById("day-a3").innerHTML = week[day + 3 - 7];
-    else document.getElementById("day-a3").innerHTML = week[day + 3];
-    ```
+document.getElementById("num-a3").innerHTML = date + 3;
+if (day > 3) document.getElementById("day-a3").innerHTML = week[day + 3 - 7];
+else document.getElementById("day-a3").innerHTML = week[day + 3];
+```
     
 
 오늘 날짜뿐만 아니라 이전 3일, 다음 3일까지 모두 날짜와 요일을 가져와야 했는데,
