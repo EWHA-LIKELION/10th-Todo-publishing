@@ -92,7 +92,7 @@ width: 900px;
 > 여기서 `column-count = 2;`를 주면 세로로 내려가고 5번째부터 단이 바뀌는 것이 아니라
 1 2 / 3 4 / 5 6 / 7 8 과 같이 오른쪽 아래 방향($\searrow$)으로 작성되었기 때문에 `flex`를 사용함
 > 
-1. **리스트의 줄간격**
+2. **리스트의 줄간격**
 
 ```css
 padding-top: 10px;
@@ -100,10 +100,10 @@ float: left;
 overflow: auto;
 ```
 
-`line-height` 대신 `float: left;`와 `padding-top`으로 줄간격을 맞추고
+`<span>`(텍스트)의 CSS 속성에서 `line-height` 대신 `float: left;`와 `padding-top`으로 줄간격을 맞추고
 `overflow: auto;`를 통해 2줄 이상 넘어가면 스크롤이 생기도록 함
 
-2. **최대 작성 가능한 리스트 개수 설정하기**
+3. **최대 작성 가능한 리스트 개수 설정하기**
 
 ```jsx
 const addTodoItem = () => {
@@ -117,7 +117,7 @@ const addTodoItem = () => {
 
 `childElementCount`을 사용해서 `<li>`의 개수를 세고, 조건문 if를 통해 최대 개수를 넘기면 팝업으로 알리고 더이상 입력받지 못하게 함
 
-3. **자동으로 오늘 날짜 불러오기**
+4. **자동으로 오늘 날짜 불러오기**
     
     ```jsx
     let now = new Date();
@@ -164,7 +164,7 @@ const addTodoItem = () => {
 날짜마다 조건과 연산을 모두 다르게 각각 설정해줌
 (나누기 연산을 썼다면 좀 더 효율적이었을 듯..)
 
-4. **스크롤 바 없애기**
+5. **스크롤 바 없애기**
 
 ```css
 body {
