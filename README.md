@@ -186,10 +186,12 @@ body::-webkit-scrollbar {
 
 [**LocalStorage에 todo 데이터를 저장**](https://velog.io/@chloe_park/Javascript-10.todo-list-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8%ED%95%B4%EB%8F%84-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0)
 
-해당 사이트에는 todo를 출력하는 부분만 있어서 printDoneItem, toggle, delete 관련된 코드도 전부 수정하였음    
-    
-    
+해당 사이트에는 todo를 출력하는 부분만 있어서 printDoneItem, toggle, delete 관련된 코드도 전부 수정하였음   
 
+
+
+  
+  
 ### 📝 직접 추가적으로 수정한 부분 중 포인트 정리
 (사이트에서 설명하는 부분은 정리 안함)
 
