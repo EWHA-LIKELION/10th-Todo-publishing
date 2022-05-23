@@ -71,3 +71,120 @@ FIgma to HTML이라는 플러그인을 발견해서 써봤는데
     타겟인 `<img>`의 부모 태그인 `<li>`를 저장해두고, `<li>`의 자손 노트 중 2번째 태그인 `<span>`을 따로 또 저장하여 innerText를 출력하게 했다.
     
     `toggleDoneToTodo`도 같은 방식으로 수정하니까 원하는 결과를 얻을 수 있었다.🎉
+
+---
+
+### 💡 해결 완료한 이슈들
+
+1. **리스트를 2개의 단으로 나누기**
+
+```css
+display: flex;
+align-content: flex-start;
+flex-direction: column;
+flex-wrap: wrap;
+overflow: auto;
+column-gap: 30px;
+width: 900px;
+```
+
+`<ul>`에 다음과 같은 CSS 속성을 부여하고 `<li>`에 `display: block;`과 `width` 값을 줌
+이때 `<ul>`의 `width` 값 = (`<li>`의 `width` 값 × 단의 개수) + 기타 `gap`, `padding` 값
+
+> 여기서 `column-count = 2;`를 주면 세로로 내려가고 5번째부터 단이 바뀌는 것이 아니라
+1 2 / 3 4 / 5 6 / 7 8 과 같이 오른쪽 아래 방향($\searrow$)으로 작성되었기 때문에 `flex`를 사용함
+> 
+1. **리스트의 줄간격**
+
+```css
+padding-top: 10px;
+float: left;
+overflow: auto;
+```
+
+`line-height` 대신 `float: left;`와 `padding-top`으로 줄간격을 맞추고
+`overflow: auto;`를 통해 2줄 이상 넘어가면 스크롤이 생기도록 함
+
+1. **최대 작성 가능한 리스트 개수 설정하기**
+
+```jsx
+const addTodoItem = () => {
+  todoListNum = document.querySelector(".todo-list").childElementCount;
+  event.preventDefault();
+  const todoContent = document.querySelector(".todo-input").value;
+  if (todoContent && todoListNum <= 8) printTodoItem(todoContent);
+  else alert("최대 8개까지만 입력할 수 있습니다.");
+};
+```
+
+*채원이의 코드를 참고했어요🤩 따봉 채원아 고마워💚*
+
+`childElementCount`을 사용해서 `<li>`의 개수를 세고, 조건문 if를 통해 최대 개수를 넘기면 팝업으로 알리고 더이상 입력받지 못하게 함
+
+1. **자동으로 오늘 날짜 불러오기**
+- ~~(스압 주의)~~ 코드
+    
+    ```jsx
+    let now = new Date();
+    let year = now.getFullYear();
+    let month = now.getMonth() + 1;
+    let date = now.getDate();
+    let today = document.querySelector(".today");
+    const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let day = now.getDay();
+    
+    document.getElementById("date-title").innerHTML = year + " / " + month;
+    
+    document.getElementById("num-b3").innerHTML = date - 3;
+    if (day < 3) document.getElementById("day-b3").innerHTML = week[day - 3 + 7];
+    else document.getElementById("day-b3").innerHTML = week[day - 3];
+    
+    document.getElementById("num-b2").innerHTML = date - 2;
+    if (day < 2) document.getElementById("day-b2").innerHTML = week[day - 2 + 7];
+    else document.getElementById("day-b2").innerHTML = week[day - 2];
+    
+    document.getElementById("num-b1").innerHTML = date - 1;
+    if (day < 1) document.getElementById("day-b1").innerHTML = week[day - 1 + 7];
+    else document.getElementById("day-b1").innerHTML = week[day - 1];
+    
+    document.getElementById("num-today").innerHTML = date;
+    document.getElementById("day-today").innerHTML = week[day];
+    
+    document.getElementById("num-a1").innerHTML = date + 1;
+    if (day > 5) document.getElementById("day-a1").innerHTML = week[day + 1 - 7];
+    else document.getElementById("day-a1").innerHTML = week[day + 1];
+    
+    document.getElementById("num-a2").innerHTML = date + 2;
+    if (day > 4) document.getElementById("day-a2").innerHTML = week[day + 2 - 7];
+    else document.getElementById("day-a2").innerHTML = week[day + 2];
+    
+    document.getElementById("num-a3").innerHTML = date + 3;
+    if (day > 3) document.getElementById("day-a3").innerHTML = week[day + 3 - 7];
+    else document.getElementById("day-a3").innerHTML = week[day + 3];
+    ```
+    
+
+오늘 날짜뿐만 아니라 이전 3일, 다음 3일까지 모두 날짜와 요일을 가져와야 했는데,
+아직 문법을 잘 모르는 저에게는 이 반복적인 미취학 아동 수준의 사칙연산을 이용한 반복문이 최선이었답니다,,,,,,,,,,,, 그래도 잘 작동하니까 된거 아닐까요? 그치만 누군가가 이미 짜둔 더 나은 코드가 있을거라고 믿어요 저만의 이런 효율 제로 코드 쓰면서도 현타가..🥲
+
+배열의 인덱스가 그 길이의 범위를 벗어나면 undefined가 뜨는게 문제였는데
+지금 생각해보니 나누기 연산을 썼다면 효율적이었겠지만 이땐 머리가 참 안굴러가더군요 ㅎ.ㅎ
+
+1. **스크롤 바 없애기**
+
+```css
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+```
+
+인터넷에서 복붙해왔답니다,,,,,^_^ 스크롤 바는 사라지지만 스크롤은 가능!
+
+### ⛔ 미해결 이슈
+
+- 새로고침해도 사라지지 않도록 todo 저장
+    - [**LocalStorage에 todo 데이터를 저장**](https://velog.io/@chloe_park/Javascript-10.todo-list-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8%ED%95%B4%EB%8F%84-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0)
