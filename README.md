@@ -188,9 +188,9 @@ body::-webkit-scrollbar {
 
 해당 사이트에는 todo를 출력하는 부분만 있어서 printDoneItem, toggle, delete 관련된 코드도 전부 수정하였음
 
----
 
-- 직접 추가적으로 수정한 부분 중 포인트만 정리 (사이트에서 설명하는 부분은 정리 안함)
+### 직접 추가적으로 수정한 부분 중 포인트 정리
+(사이트에서 설명하는 부분은 정리 안함)
     
     <aside>
     ❕ input을 text뿐만 아니라 id, place 값을 가지는 객체로 받기
