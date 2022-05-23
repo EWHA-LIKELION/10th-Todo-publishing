@@ -187,14 +187,15 @@ body::-webkit-scrollbar {
 [**LocalStorage에 todo 데이터를 저장**](https://velog.io/@chloe_park/Javascript-10.todo-list-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8%ED%95%B4%EB%8F%84-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0)
 
 해당 사이트에는 todo를 출력하는 부분만 있어서 printDoneItem, toggle, delete 관련된 코드도 전부 수정하였음
-
----
+    
+    
 
 ### 📝 직접 추가적으로 수정한 부분 중 포인트 정리
 (사이트에서 설명하는 부분은 정리 안함)
-    
-    <aside>
-    ❕ input을 text뿐만 아니라 id, place 값을 가지는 객체로 받기
+
+---
+
+- input을 text뿐만 아니라 id, place 값을 가지는 객체로 받기
     
     ```jsx
     const todoContentObj = {
@@ -203,13 +204,12 @@ body::-webkit-scrollbar {
     place: "todo",
     };
     ```
-    
-     토글했을 때 상태를 저장하기 위해 place라는 key를 만들고, 처음 input할 때는 모두 todo에 표시되기 때문에 처음 value는 todo이며, 이후 토글할 때 `place: "done"`으로 바뀌도록 함 (done→todo 토글 시에도 `place: “todo”`로 변경)
-    
-    </aside>
-    
-    <aside>
-    ❕ 토글하면 토글된 위치를 저장하기 (타겟 todo의 텍스트와 객체 toDos의 텍스트가 같다면, 즉 토글하기 위해 클릭한 todo의 place 값을 변경)
+
+토글했을 때 상태를 저장하기 위해 place라는 key를 만들고, 처음 input할 때는 모두 todo에 표시되기 때문에 처음 value는 todo이며, 이후 토글할 때 `place: "done"`으로 바뀌도록 함 (done→todo 토글 시에도 `place: “todo”`로 변경)
+
+---
+
+- 토글하면 토글된 위치를 저장하기 (타겟 todo의 텍스트와 객체 toDos의 텍스트가 같다면, 즉 토글하기 위해 클릭한 todo의 place 값을 변경)
     
     ```jsx
     for (var i = 0; i < toDos.length; i++) {
@@ -222,12 +222,11 @@ body::-webkit-scrollbar {
     saveTodo();
     ```
     
-    이때 reprint 함수를 따로 만들어 사용한 이유는 객체를 인자로 줄 수 없어서 태그를 인자로 받는 함수가 추가로 필요했기 때문임
+이때 reprint 함수를 따로 만들어 사용한 이유는 객체를 인자로 줄 수 없어서 태그를 인자로 받는 함수가 추가로 필요했기 때문임
     
-    </aside>
+---
     
-    <aside>
-    ❕ print 함수가 나누어져 있기 때문에 place 값에 따라 다른 함수를 실행하도록 함
+- print 함수가 나누어져 있기 때문에 place 값에 따라 다른 함수를 실행하도록 함
     
     ```jsx
     toDos = JSON.parse(savedTodos);
@@ -240,12 +239,11 @@ body::-webkit-scrollbar {
     }
     ```
     
-    이때 toDos 배열에 localStorage에서 가져온 savedTodos를 다시 저장하지 않으면 처음 배열을 선언할 때 작성한 코드인 `let toDos = [];` 때문에 빈 배열로 초기화되(는 것 같..)기 때문에 새로고침할 때마다 계속 가져와야 했음
+이때 toDos 배열에 localStorage에서 가져온 savedTodos를 다시 저장하지 않으면 처음 배열을 선언할 때 작성한 코드인 `let toDos = [];` 때문에 빈 배열로 초기화되(는 것 같..)기 때문에 새로고침할 때마다 계속 가져와야 했음
     
-    </aside>
+---
     
-    <aside>
-    ❕ × 버튼 클릭 시 화면에서 사라지고 localStorage에서도 삭제되어야 함
+- × 버튼 클릭 시 화면에서 사라지고 localStorage에서도 삭제되어야 함
     
     ```jsx
     const target = e.target.parentNode;
@@ -260,9 +258,9 @@ body::-webkit-scrollbar {
     saveTodo();
     ```
     
-    이때 `<li>`의 class명에 따라 다른 함수가 실행되도록 했는데, deleteItem 함수 내의 코드가 `document.querySelector(".ul 클래스명").removeChild(target);`이기 때문에 올바른 부모 태그인 `<ul>`을 선택해야 removeChild를 사용할 수 있었기 때문임
+이때 `<li>`의 class명에 따라 다른 함수가 실행되도록 했는데, deleteItem 함수 내의 코드가 `document.querySelector(".ul 클래스명").removeChild(target);`이기 때문에 올바른 부모 태그인 `<ul>`을 선택해야 removeChild를 사용할 수 있었기 때문임
     
-    </aside>
+---
 
 ### ⛔ 미해결 이슈
 
