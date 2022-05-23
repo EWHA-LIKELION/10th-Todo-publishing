@@ -9,10 +9,7 @@
 
 ![screen](./screen.png)
 
-### [GitHub 링크](https://github.com/529539/10th-Todo-publishing)
-
 ### [netlify 링크](https://todo-geeeezin-529539.netlify.app/)
-deploy도 한번 해봤습니다 부꾸럽지만 나름 제 첫 페이지니까요...^//^
 
 ### ⛔ 미해결 이슈
 
@@ -73,6 +70,7 @@ FIgma to HTML이라는 플러그인을 발견해서 써봤는데
     `toggleDoneToTodo`도 같은 방식으로 수정하니까 원하는 결과를 얻을 수 있었다.🎉
 
 ---
+### [vercel 링크](https://)
 
 ### 💡 해결 완료한 이슈들
 
