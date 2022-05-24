@@ -1,195 +1,221 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-* { 
-font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-font-weight: 500;
+* {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', sans-serif;
+  font-weight: 500;
 }
 
 @font-face {
-    font-family: 'My Handwriting Font Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: url('font/My_handwriting.ttf') format('truetype');
+  font-family: 'My Handwriting Font Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('font/My_handwriting.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'ocr A std';
-    font-style: normal;
-    font-weight: bolder;
-    src: url('font/OCRAStd.woff') format('woff');
+  font-family: 'ocr A std';
+  font-style: normal;
+  font-weight: bolder;
+  src: url('font/OCRAStd.woff') format('woff');
 }
 
-body{
-    background-image: url("image/background.png");
-    margin-bottom: 0px;
+body {
+  background-image: url('image/background.png');
+  margin-bottom: 0px;
 }
 
 /* main part */
 .main {
-    width: 805px;
-    height: 1027px;
-    display: flex;
-    flex-direction: column;
-    background-image: url('image/paper.png');
-    top: 0px;
+  width: 805px;
+  height: 1027px;
+  display: flex;
+  flex-direction: column;
+  background-image: url('image/paper.png');
+  top: 0px;
 }
 
-.main .title{
-    font-family: 'My Handwriting Font Regular';
-    font-size: 130px;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 70px;
+.main .title {
+  font-family: 'My Handwriting Font Regular';
+  font-size: 130px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 70px;
 }
 
 /* 날짜 및 구분선 */
-.date{
-    margin-top: 30px;
+.date {
+  margin-top: 30px;
 }
 
 .line,
 .current_date {
-    padding: 18px;
-    font-family: 'ocr A std';
-    font-size: 30px;
-    font-weight: bolder;
-    margin-left: 10px
+  padding: 18px;
+  font-family: 'ocr A std';
+  font-size: 30px;
+  font-weight: bolder;
+  margin-left: 10px;
 }
 
 .current_date {
-    text-shadow: 3px 3px 5px gray;
+  text-shadow: 3px 3px 5px gray;
 }
 
 /* form */
-form > input[type=text]{
-    border:none;
-    border-bottom: 2px solid black;
-    background: none;
-    padding: 10px;
-    width: 500px;
-    font-size: 20px;
-    outline: none;
+form > input[type='text'] {
+  border: none;
+  border-bottom: 2px solid black;
+  background: none;
+  padding: 10px;
+  width: 500px;
+  font-size: 20px;
+  outline: none;
 }
 /* popup button */
-form > button{
-    border: none;
-    background: none;
-    cursor: pointer;
+form > button {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 form {
-    display: none;
+  display: none;
 }
 
-.inputBox{
-    padding: 18px;
-    margin-left: 20px;
+.inputBox {
+  padding: 18px;
+  margin-left: 20px;
 }
 
-.popupBox{
-    width: 140px;
-    height: 40px;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: -2px 4px 4px 0px gray;
+.popupBox {
+  width: 140px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: -2px 4px 4px 0px gray;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.popupBox>span{
-    font-family: 'ocr A std';
-    font-size: 25px;
-    font-weight: 900;
+.popupBox > span {
+  font-family: 'ocr A std';
+  font-size: 25px;
+  font-weight: 900;
 }
 
-.popupBox>button{
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 100%;
-    background: -moz-linear-gradient(top, #E2E2E2 0%, #F6F6F6 100%);
-    background: -webkit-linear-gradient(top, #E2E2E2 0%, #F6F6F6 100%);
-    background: linear-gradient(to bottom, #E2E2E2 0%, #F6F6F6 100%);
-    border: none;
-    cursor: pointer;
-    
+.popupBox > button {
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 100%;
+  background: -moz-linear-gradient(top, #e2e2e2 0%, #f6f6f6 100%);
+  background: -webkit-linear-gradient(top, #e2e2e2 0%, #f6f6f6 100%);
+  background: linear-gradient(to bottom, #e2e2e2 0%, #f6f6f6 100%);
+  border: none;
+  cursor: pointer;
 }
-ul{
-    list-style: none;
-}
-
-.main>ul li{
-    width:90%;
-    padding: 18px;
-    /* margin: 5px 0; */
-    font-size: 22px;
+ul {
+  list-style: none;
 }
 
-li button{
-    float: right;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.main > ul li {
+  width: 90%;
+  padding: 24px;
+  /* margin: 5px 0; */
+  font-size: 22px;
 }
 
-
-.tempBox{
-    margin-left: 20px;
+li button {
+  float: right;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-.doneBox{
-    margin-left:20px;
-    font-family: 'ocr A std';
-    font-size: 25px;
-    font-weight: 1000;
-    width: 100px;
-    height: 40px;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: -2px 4px 4px 0px gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.todoList,
+.doneList {
+  overflow-y: scroll;
+  height: 150px;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-left: 100px;
-    margin-top: 40px;
-    margin-bottom: 0px;
-    position: relative;
+.todoList::-webkit-scrollbar,
+.doneList::-webkit-scrollbar {
+  border-radius: 4px;
 }
 
-.tape{
-    position: absolute;
-    z-index: 1;
-    top: 0px;
-    left: 0px;
+.doneList button {
+  transform: translate(0, -50%);
 }
 
+.tempBox {
+  margin-left: 20px;
+}
+.doneBox {
+  margin-left: 20px;
+  font-family: 'ocr A std';
+  font-size: 25px;
+  font-weight: 1000;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: -2px 4px 4px 0px gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 100px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.tape {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+}
 
 /* sub part */
 
-.sub{
-    margin-left: 20px;
+.sub {
+  margin-left: 20px;
 }
 
-.sub .account{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.sub .account {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.sub .account>li{
-    padding: 8px;
-    cursor: pointer;
+.sub .account > li {
+  padding: 8px;
+  cursor: pointer;
 }
 
-.sub .account .userName{
-    font-family: 'My Handwriting Font Regular';
-    font-size: 65px;
-    font-weight: 600;
+.sub .account .userName {
+  font-family: 'My Handwriting Font Regular';
+  font-size: 65px;
+  font-weight: 600;
 }
 
+/* .sub .calender {
+  width: 845px;
+  height: 931px;
+}
+
+.sub .calender .dateHead {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.sub .calender .dateBoard {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+} */
