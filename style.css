@@ -138,18 +138,33 @@ body {
     position: relative;
 }
 
-.todobox{
+.todo-list-big{
     position: absolute;
+}
+
+.todobox-title-1{
+    position: relative;
+    width: 450px;
+    height: 45px;
+    background: #C6D8D8;
+    box-shadow: 0px 4px 4px rgb(177, 177, 177);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 18pt;
+    padding-left: 10px;
+    padding-top: 10px;
+    
+}
+.todobox-content-1{
+    position: absolute;
+    box-sizing: border-box;
     width: 450px;
     height: 121px;
-    left: 120px;
     background: #C6D8D8;
     box-shadow: 0px 4px 4px lightgray;
     border-radius: 10px;
-}
-
-#tb1{
-    top: 50px;
+    font-size: 14pt;
+    margin-left: 100px;
 }
 
 #tb2{
@@ -166,7 +181,7 @@ body {
     width: 40px;
     height: 40px;
     font-size: large;
-    margin-left: 10px;
+    margin-left: 20px;
     border-radius: 50%;
     margin-top: 560px;
     background-color: #F8FBFF;
