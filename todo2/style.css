@@ -1,0 +1,478 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", sans-serif;
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  width: 1920px;
+  height: 1080px;
+  background: #fafafa;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.top-container {
+  width: 1920px;
+  height: 113px;
+  background: #fafafa;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  box-shadow: 0px 3px 34px -6px rgba(74, 74, 74, 0.2);
+  overflow: hidden;
+}
+.logo-container {
+  overflow: hidden;
+}
+.logo-text {
+  position: absolute;
+  left: 85px;
+  top: 35px;
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  font-size: 30px;
+  color: #26585a;
+}
+.logo-text2 {
+  left: 230px;
+}
+.lion-logo {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 33px;
+  left: 178px;
+}
+.heart-icon {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: 1602px;
+  top: 35px;
+}
+.profile-circle {
+  width: 60px;
+  height: 60px;
+  background: rgba(231, 231, 231, 1);
+  position: absolute;
+  top: 27px;
+  left: 1688px;
+  border-radius: 50%;
+}
+.menu-icon-vector {
+  position: absolute;
+  width: 43px;
+  left: 1791px;
+  border-radius: 3px;
+  border: 2px solid #26585a;
+  background-color: #26585a;
+}
+.menu-icon-vector1 {
+  top: 46px;
+}
+.menu-icon-vector2 {
+  top: 57px;
+}
+.menu-icon-vector3 {
+  top: 68px;
+}
+.calender-icon {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: 85px;
+  top: 157px;
+}
+.date-title {
+  position: absolute;
+  left: 151px;
+  top: 161px;
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-size: 30px;
+  color: #26585a;
+}
+.timeline {
+  width: 1750px;
+  position: absolute;
+  border: 1px solid rgba(38, 88, 90, 1);
+  left: calc(50% - 1750px / 2 - 0.5px);
+  top: calc(50% - 0px / 2 - 243px);
+}
+.dot-we {
+  width: 12px;
+  height: 12px;
+  background: rgba(235, 198, 198, 1);
+  position: absolute;
+  top: 292px;
+  border-radius: 50%;
+}
+.num-we {
+  width: 39px;
+  color: rgba(235, 198, 198, 1);
+  position: absolute;
+  top: 250px;
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+}
+.day-we {
+  width: 28px;
+  color: rgba(235, 198, 198, 1);
+  position: absolute;
+  top: 223px;
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+.dot-wd {
+  width: 12px;
+  height: 12px;
+  background: rgba(152, 186, 188, 1);
+  position: absolute;
+  top: 292px;
+  border-radius: 50%;
+}
+.num-wd {
+  width: 38px;
+  color: rgba(152, 186, 188, 1);
+  position: absolute;
+  top: 250px;
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+}
+.day-wd {
+  width: 37px;
+  color: rgba(152, 186, 188, 1);
+  position: absolute;
+  top: 223px;
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+.dot-b3 {
+  left: 184px;
+}
+.num-b3 {
+  left: 171px;
+}
+.day-b3 {
+  left: 174px;
+}
+.dot-b2 {
+  left: 395px;
+}
+.num-b2 {
+  left: 382px;
+}
+.day-b2 {
+  left: 387px;
+}
+.dot-b1 {
+  left: 610px;
+}
+.num-b1 {
+  left: 597px;
+}
+.day-b1 {
+  left: 598px;
+}
+.dot-today {
+  width: 18px;
+  height: 18px;
+  background: rgba(63, 63, 63, 1);
+  position: absolute;
+  top: 289px;
+  left: 951px;
+  border-radius: 50%;
+}
+.num-today {
+  width: 71px;
+  color: rgba(38, 88, 90, 1);
+  position: absolute;
+  top: 217px;
+  left: 925px;
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-size: 55px;
+  text-align: center;
+}
+.day-today {
+  width: 43px;
+  color: rgba(38, 88, 90, 1);
+  position: absolute;
+  top: 189px;
+  left: 939px;
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 25px;
+  text-align: center;
+}
+.date-arrow {
+  overflow: hidden;
+}
+.date-arrow-left {
+  position: absolute;
+  width: 16px;
+  height: 38px;
+  left: 786px;
+  top: 233px;
+}
+.date-arrow-right {
+  position: absolute;
+  width: 16px;
+  height: 38px;
+  left: 1125px;
+  top: 233px;
+  transform: rotate(-180deg);
+}
+.dot-a1 {
+  left: 1282px;
+}
+.num-a1 {
+  left: 1269px;
+}
+.day-a1 {
+  left: 1271px;
+}
+.dot-a2 {
+  left: 1495px;
+}
+.num-a2 {
+  left: 1482px;
+}
+.day-a2 {
+  left: 1484px;
+}
+.dot-a3 {
+  left: 1708px;
+}
+.num-a3 {
+  left: 1695px;
+}
+.day-a3 {
+  left: 1695px;
+}
+.todo-subtitle {
+  position: absolute;
+  left: 245px;
+  top: 564px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 42px;
+  color: #26585a;
+  overflow: hidden;
+  z-index: 10;
+}
+.todo-title {
+  position: absolute;
+  left: 227px;
+  top: 606px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 100px;
+  line-height: 120px;
+  color: #26585a;
+  overflow: hidden;
+  z-index: 10;
+}
+.todo-background-circle1 {
+  position: absolute;
+  width: 192px;
+  height: 192px;
+  left: 143px;
+  top: 546px;
+  background-color: #f6f3dd;
+  border-radius: 50%;
+}
+.todo-background-circle2 {
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  left: 724px;
+  top: 666px;
+  background-color: #f6f3dd;
+  border-radius: 50%;
+}
+.list-title {
+  position: absolute;
+  width: 93px;
+  height: 36px;
+  left: 1019px;
+  top: 381px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #26585a;
+}
+.todo-form {
+  display: none;
+  left: 1200px;
+  top: 381px;
+  overflow: hidden;
+  z-index: 10;
+}
+.todo-form-colon {
+  position: absolute;
+  width: 93px;
+  height: 36px;
+  left: 1110px;
+  top: 381px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #26585a;
+}
+.todo-input {
+  position: absolute;
+  left: 1130px;
+  top: 382px;
+  width: 550px;
+  height: 36px;
+  border: 0;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+  color: rgb(133, 133, 133);
+}
+input::placeholder {
+  color: rgb(170, 170, 170);
+  font-style: italic;
+}
+.todo-input-button {
+  position: absolute;
+  left: 1685px;
+  top: 382px;
+  width: 50px;
+  height: 36px;
+  border: 0;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 5px;
+  color: #26585a;
+}
+.popup-button {
+  position: absolute;
+  left: 1750px;
+  top: 385px;
+}
+.title-vector {
+  position: absolute;
+  width: 776px;
+  height: 0px;
+  left: 1007px;
+  top: 425px;
+  border: 1px solid #26585a;
+  background-color: #26585a;
+}
+.list-title2 {
+  top: 693px;
+}
+.title-vector2 {
+  top: 737px;
+}
+.todo-list {
+  position: absolute;
+  left: 1000px;
+  top: 433px;
+  list-style: none;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: 230px;
+  width: 800px;
+  column-gap: 30px;
+}
+.done-list {
+  position: absolute;
+  left: 1000px;
+  top: 745px;
+  list-style: none;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: 230px;
+  width: 900px;
+  column-gap: 30px;
+}
+.todo-list-item,
+.done-list-item {
+  display: block;
+  width: 350px;
+}
+.todo-circle,
+.done-circle {
+  float: left;
+  padding: 13.5px 10px;
+}
+.todo-item-text,
+.done-item-text {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 25px;
+  padding-top: 10px;
+  float: left;
+  color: #26585a;
+  width: 275px;
+  height: 50px;
+  overflow: auto;
+}
+.todo-delete-button,
+.done-delete-button {
+  border: 0px;
+  height: 30px;
+  padding: 15px 10px;
+  float: right;
+  background-color: #fafafa;
+  font-family: "NEXON Lv1 Gothic OTF Light";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  color: #26585a;
+}
