@@ -16,9 +16,15 @@
       <div class="menusection">
         <span class="title">Likelion List</span>
         <div class="menu">
-          <div class="daily-btn"><div class="d">Daily</div></div>
-          <div class="weekly-btn"><div class="d">Weekly</div></div>
-          <div class="monthly-btn"><div class="d">Monthly</div></div>
+          <div class="tap-btn here" data-id="0">
+            <p style="margin-top: 8%">Daily</p>
+          </div>
+          <div class="tap-btn" data-id="1">
+            <p style="margin-top: 8%">Weekly</p>
+          </div>
+          <div class="tap-btn" data-id="2">
+            <p style="margin-top: 8%">Monthly</p>
+          </div>
           <div class="hr"><hr /></div>
           <div class="setting-btn"><div class="d">Setting</div></div>
           <div class="logout-btn"><div class="d">Log out</div></div>
@@ -32,29 +38,55 @@
     </div>
 
     <div class="v93_424">
-      <div class="turnleft"><img src="image\Polygon 1.png" alt="" /></div>
-      <div class="sunday">
-        <span class="dayofweek">Sun</span><span class="date"> 8</span>
+      <div class="turnleft">
+        <img class="turn" src="image\Polygon 1.png" alt="" />
       </div>
-      <div class="v93_426">
-        <span class="dayofweek">Mon</span><span class="date"> 9</span>
+      <div class="datebox" data-id="0">
+        <span class="dayofweek" id="num-b3" data-id="0"></span
+        ><span class="date" id="day-b3" data-id="0"> </span>
       </div>
-      <div class="v93_427">
-        <span class="v93_441">Tue</span><span class="v93_435">10</span>
+      <div class="datebox" data-id="1">
+        <span class="dayofweek" id="num-b2" data-id="1"></span
+        ><span class="date" id="day-b2" data-id="1"> </span>
       </div>
-      <div class="v93_428">
-        <span class="dayofweek">Wed</span><span class="date">11</span>
+      <div class="datebox" data-id="2">
+        <span class="dayofweek" id="num-b1" data-id="2"></span
+        ><span class="date" id="day-b1" data-id="2"></span>
       </div>
-      <div class="v93_429">
-        <span class="dayofweek">Thu</span><span class="date">12</span>
+      <div class="datebox check" data-id="3">
+        <span class="dayofweek checktext" id="num-today" data-id="3"></span
+        ><span class="date checktext" id="day-today" data-id="3"></span>
       </div>
-      <div class="v93_430">
-        <span class="dayofweek">Fri</span><span class="date">13</span>
+      <div class="datebox" data-id="4">
+        <span class="dayofweek" id="num-a1" data-id="4"></span
+        ><span class="date" id="day-a1" data-id="4"></span>
       </div>
-      <div class="v93_431">
-        <span class="dayofweek">Sat</span><span class="date">14</span>
+      <div class="datebox" data-id="5">
+        <span class="dayofweek" id="num-a2" data-id="5"></span
+        ><span class="date" id="day-a2" data-id="5"></span>
+      </div>
+      <div class="datebox" data-id="6">
+        <span class="dayofweek" id="num-a3" data-id="6"></span
+        ><span class="date" id="day-a3" data-id="6"></span>
       </div>
       <div class="turnright"><img src="image\Polygon 2.png" /></div>
+    </div>
+    <div class="monthly-area">
+      <div class="navigator">
+        <div class="btn prevDay"></div>
+        <h2 class="dateTitle"></h2>
+        <div class="btn nextDay"></div>
+      </div>
+      <div class="grid dateHead">
+        <div>일</div>
+        <div>월</div>
+        <div>화</div>
+        <div>수</div>
+        <div>목</div>
+        <div>금</div>
+        <div>토</div>
+      </div>
+      <div class="grid dateBoard"></div>
     </div>
 
     <div class="to-do-list-area">
@@ -63,7 +95,6 @@
         <img src="image\add 1.png" />
       </button>
       <span class="edit-items"><img src="image\edit 2.png" /></span>
-      <div class="scroll_area"><div class="scroll_blue"></div></div>
 
       <div class="todo-list"></div>
     </div>
@@ -73,8 +104,6 @@
       <button type="button" class="done-input-items">
         <img src="image\add 1.png" />
       </button>
-      <div class="done_scroll_area"><div class="scroll_blue"></div></div>
-
       <div class="done-list"></div>
       <div class="v93_453">
         <button type="button" class="exercise">운동</button>
@@ -92,21 +121,13 @@
         </button>
         <form class="todo-form">
           <input class="todo-input" placeholder="할 일을 적어주세요" />
-          <div id="d">
-            <button type="button" id="a" value="1 " class="Mexercise">
-              운동
-            </button>
-            <button type="button" id="a" value="2 " class="Mclass">강의</button>
-            <button type="button" id="a" value="3 " class="Mhw">
-              전공과제
-            </button>
-            <button type="button" id="a" value="4 " class="Mexhibit">
-              공모전
-            </button>
-            <button type="button" class="add">
-              <img src="image\add 2.png" />
-            </button>
-          </div>
+          <button type="button" id="a" class="Mexercise">운동</button>
+          <button type="button" id="b" class="Mclass">강의</button>
+          <button type="button" id="c" class="Mhw">전공과제</button>
+          <button type="button" id="d" class="Mexhibit">공모전</button>
+          <button type="button" class="add">
+            <img src="image\add 2.png" />
+          </button>
           <input
             class="todo-detail-input"
             placeholder="자세한 내용을 적어주세요."
